@@ -2,34 +2,287 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hizmetler – Milenium Security</title>
   <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <h1>Hizmet Kategorilerimiz</h1>
-    <nav>
+  <header id="navbar" class="navbar">
+    <div class="container">
+      <div class="logo">
+        <a href="index.html">
+          <img src="assets/logo.png" alt="Milenium Security" class="logo-img">
+          <h1>Milenium Security</h1>
+        </a>
+      </div>
+      <nav class="main-nav">
       <a href="index.html">Ana Sayfa</a>
       <a href="about.html">Hakkımızda</a>
+        <a href="services.html" class="active">Hizmetler</a>
       <a href="contact.html">İletişim</a>
+        <button class="lang-toggle" id="langToggle">EN</button>
     </nav>
+    </div>
   </header>
 
-  <section class="services">
-    <h2>Offensive Security</h2>
-    <p>Web, Mobile, Network, AD, IoT/OT Pentesting, Red Team, Sosyal Mühendislik, Simülasyonlar.</p>
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1 class="page-title" data-aos="fade-down" id="servicesPageTitle">Hizmetlerimiz</h1>
+        <p class="page-subtitle" data-aos="fade-up" data-aos-delay="200" id="servicesPageSubtitle">Kapsamlı Siber Güvenlik Danışmanlık Hizmetleri</p>
+      </div>
+    </section>
 
-    <h2>Blue Team Engineering</h2>
-    <p>IR, SIEM/EDR kurulumu, Tehdit Avcılığı, Yedekleme Güvenliği, Cloud Monitoring, SOC Tasarımı.</p>
+    <section class="services-content">
+      <div class="container">
+        
+        <section class="category" data-aos="fade-up">
+          <h2 class="category-title">🟥 1. Offensive Security Services</h2>
+          
+          <div class="service-item">
+            <h3>Web Application Penetration Testing</h3>
+            <p>OWASP Top 10, API güvenliği, erişim kontrol ve kimlik doğrulama zafiyet analizleri.</p>
+          </div>
 
-    <h2>GRC & Compliance</h2>
-    <p>ISO 27001, NIST, CIS, KVKK, Risk Analizi, Politika Geliştirme, Denetim Hazırlığı.</p>
+          <div class="service-item">
+            <h3>Mobile Application Security Testing</h3>
+            <p>Android ve iOS uygulamalarında veri sızıntısı, güvenli depolama, kimlik doğrulama testleri.</p>
+          </div>
 
-    <h2>Cloud, DevSecOps & Secure Development</h2>
-    <p>CI/CD güvenliği, Secure SDLC, Cloud Assessment, Container/Kubernetes güvenliği, API koruması.</p>
+          <div class="service-item">
+            <h3>Network & Infrastructure Penetration Testing</h3>
+            <p>Ağ bileşenleri, firewall, VPN, segmentasyon ve yönlendirme katmanı güvenlik denetimleri.</p>
+          </div>
 
-    <h2>Training & Awareness</h2>
-    <p>Security Awareness, Incident Response tatbikatları, Red/Blue/Purple Team eğitimleri, Secure Coding atölyeleri.</p>
+          <div class="service-item">
+            <h3>Active Directory Security Assessment</h3>
+            <p>Yetki yükseltme, Kerberos açıkları, domain içi hareket ve kalıcılık analizleri.</p>
+          </div>
+
+          <div class="service-item">
+            <h3>IoT / OT / SCADA Security Testing</h3>
+            <p>Endüstriyel kontrol sistemlerinde firmware analizi, ağ trafiği izleme, donanım zafiyet analizi.</p>
+          </div>
+
+          <div class="service-item">
+            <h3>Red Team Operations</h3>
+            <p>Gerçek tehdit aktörü davranışlarını simüle eden çok katmanlı saldırı senaryoları.</p>
+          </div>
+
+          <div class="service-item">
+            <h3>Social Engineering Assessments</h3>
+            <p>Phishing, vishing ve fiziksel erişim testleriyle kullanıcı farkındalığının ölçülmesi.</p>
+          </div>
+
+          <div class="service-item">
+            <h3>Breach & Attack Simulation (BAS)</h3>
+            <p>Blue Team tepki sürelerinin test edilmesi, SIEM/EDR performans ölçümü.</p>
+          </div>
+
+          <div class="service-item">
+            <h3>Vulnerability Assessment</h3>
+            <p>Sürekli zafiyet taramaları, güvenlik açığı doğrulama ve önceliklendirme.</p>
+          </div>
+        </section>
+
+        <section class="category" data-aos="fade-up" data-aos-delay="100">
+          <h2 class="category-title">🟦 2. Defensive Security & Blue Team Engineering</h2>
+          
+          <div class="service-item">
+            <h3>SIEM & SOAR Implementation</h3>
+            <p>Log toplama, korelasyon, MITRE ATT&CK haritalaması ve olay otomasyonu.</p>
+          </div>
+
+          <div class="service-item">
+            <h3>Endpoint Detection & Response (EDR/XDR)</h3>
+            <p>Uç nokta tehdit tespiti, davranış analizi, olay izolasyonu.</p>
+          </div>
+
+          <div class="service-item">
+            <h3>Incident Response & Forensic Analysis</h3>
+            <p>Saldırı sonrası analiz, bellek ve disk adli incelemeleri, olay raporlama.</p>
+          </div>
+
+          <div class="service-item">
+            <h3>Threat Hunting Operations</h3>
+            <p>IOC ve anomali tespiti, aktif tehdit araştırması, log korelasyonu.</p>
+          </div>
+
+          <div class="service-item">
+            <h3>Network Security Monitoring</h3>
+            <p>Trafik analizi, saldırı modeli tespiti, IDS/IPS yapılandırma.</p>
+          </div>
+
+          <div class="service-item">
+            <h3>Backup & Disaster Recovery Security</h3>
+            <p>Felaket kurtarma senaryoları, yedekleme güvenliği, ransomware testleri.</p>
+          </div>
+
+          <div class="service-item">
+            <h3>Cloud & Hybrid Infrastructure Monitoring</h3>
+            <p>Bulut ve hibrit ortamlarda log izleme, erişim takibi ve alarm yönetimi.</p>
+          </div>
+
+          <div class="service-item">
+            <h3>Deception & Honeynet Deployment</h3>
+            <p>Saldırgan davranışlarını yakalamak için yanıltma sistemleri ve tuzak ağlar.</p>
+          </div>
+
+          <div class="service-item">
+            <h3>Security Posture Assessment</h3>
+            <p>SOC olgunluk seviyesi değerlendirmesi, güvenlik kontrolleri analizi.</p>
+          </div>
+        </section>
+
+        <section class="category" data-aos="fade-up" data-aos-delay="200">
+          <h2 class="category-title">🟨 3. Governance, Risk & Compliance (GRC)</h2>
+          
+          <div class="service-item">
+            <h3>ISO 27001 / NIST / CIS Alignment</h3>
+            <p>Bilgi güvenliği yönetim sistemi tasarımı, kontrol uyumluluğu, süreç yönetimi.</p>
+          </div>
+
+          <div class="service-item">
+            <h3>KVKK & GDPR Compliance</h3>
+            <p>Veri sınıflandırma, gizlilik politikaları, DPIA ve erişim denetimi süreçleri.</p>
+          </div>
+
+          <div class="service-item">
+            <h3>Risk Management & Business Impact Analysis</h3>
+            <p>Risk matrisleri, etki değerlendirmesi, süreklilik planlama.</p>
+          </div>
+
+          <div class="service-item">
+            <h3>Policy & Procedure Development</h3>
+            <p>Kurumsal güvenlik politikaları, erişim, parola, olay müdahale dokümantasyonu.</p>
+          </div>
+
+          <div class="service-item">
+            <h3>Audit Preparation & Continuous Compliance</h3>
+            <p>Denetim öncesi değerlendirme, sürekli uyum izleme ve düzeltici faaliyet planlama.</p>
+          </div>
+
+          <div class="service-item">
+            <h3>Vendor & Third-Party Risk Management</h3>
+            <p>Tedarikçi güvenliği değerlendirmeleri, dış kaynaklı risk kontrolü.</p>
+          </div>
+
+          <div class="service-item">
+            <h3>Business Continuity & Crisis Management</h3>
+            <p>Kriz senaryosu modelleme, iletişim planı, operasyonel dayanıklılık testi.</p>
+          </div>
+        </section>
+
+        <section class="category" data-aos="fade-up" data-aos-delay="300">
+          <h2 class="category-title">🟩 4. Cloud, DevSecOps & Secure Software Development</h2>
+          
+          <div class="service-item">
+            <h3>Secure SDLC (Güvenli Yazılım Geliştirme Yaşam Döngüsü)</h3>
+            <p>Yazılım geliştirme süreçlerinde tehdit modelleme, güvenli kodlama standartları, kod inceleme ve testlerin SDLC'ye entegrasyonu.</p>
+          </div>
+
+          <div class="service-item">
+            <h3>Secure Code Review</h3>
+            <p>Kaynak kodlarının manuel ve otomatik güvenlik denetimi, veri işleme akışlarının doğrulaması.</p>
+          </div>
+
+          <div class="service-item">
+            <h3>DevSecOps Pipeline Security</h3>
+            <p>CI/CD hatlarında otomatik güvenlik taramaları, bağımlılık kontrolü, kod bütünlüğü doğrulama.</p>
+          </div>
+
+          <div class="service-item">
+            <h3>Container & Kubernetes Security</h3>
+            <p>Kapsayıcı güvenliği, erişim politikaları, çalışma zamanı koruması ve ağ izolasyonu.</p>
+          </div>
+
+          <div class="service-item">
+            <h3>Infrastructure as Code (IaC) Security</h3>
+            <p>Terraform, Ansible gibi otomasyon yapılandırmalarında güvenlik politikaları ve drift tespiti.</p>
+          </div>
+
+          <div class="service-item">
+            <h3>Cloud Security Assessment</h3>
+            <p>Bulut ortamlarında IAM, ağ, depolama ve erişim yapılandırması denetimi.</p>
+          </div>
+
+          <div class="service-item">
+            <h3>API Security & Gateway Protection</h3>
+            <p>API erişim kontrolü, kimlik doğrulama, oran sınırlama ve veri bütünlüğü kontrolleri.</p>
+          </div>
+
+          <div class="service-item">
+            <h3>Secrets & Key Management</h3>
+            <p>Merkezi gizli yönetimi, anahtar rotasyonu, erişim yetkisi yönetimi.</p>
+          </div>
+
+          <div class="service-item">
+            <h3>Security Automation & Orchestration</h3>
+            <p>SOAR playbook tasarımı, olay otomasyonu, güvenlik iş akışı entegrasyonu.</p>
+          </div>
+
+          <div class="service-item">
+            <h3>Container Supply Chain Protection</h3>
+            <p>İmaj doğrulama, bağımlılık zinciri güvenliği, tedarik zinciri bütünlüğü.</p>
+          </div>
+        </section>
+
+        <section class="category" data-aos="fade-up" data-aos-delay="400">
+          <h2 class="category-title">🟪 5. Awareness, Training & Continuous Improvement</h2>
+          
+          <div class="service-item">
+            <h3>Security Awareness Programs</h3>
+            <p>Personel farkındalık eğitimleri, phishing simülasyonları ve davranış analizi.</p>
+          </div>
+
+          <div class="service-item">
+            <h3>Incident Response Simulations</h3>
+            <p>Kriz tatbikatları, masa başı senaryoları, ekip koordinasyon tatbikatları.</p>
+          </div>
+
+          <div class="service-item">
+            <h3>Blue Team & SOC Analyst Training</h3>
+            <p>Log analizi, tespit geliştirme, SIEM eğitimi ve tehdit avcılığı pratikleri.</p>
+          </div>
+
+          <div class="service-item">
+            <h3>Red Team & Purple Team Exercises</h3>
+            <p>Saldırı-savunma işbirliği senaryoları, algılama ve tepki geliştirme çalışmaları.</p>
+          </div>
+
+          <div class="service-item">
+            <h3>Secure Coding Workshops</h3>
+            <p>Yazılım geliştiricilere yönelik güvenli kodlama eğitimleri ve OWASP Top 10 uygulamaları.</p>
+          </div>
+
+          <div class="service-item">
+            <h3>C-Level Cyber Risk Workshops</h3>
+            <p>Yönetici düzeyinde tehdit farkındalığı, finansal etki analizi ve karar destek çalışmaları.</p>
+          </div>
+
+          <div class="service-item">
+            <h3>Gamified Learning & CTF Programs</h3>
+            <p>Kurumsal yarışmalar, senaryo tabanlı eğitimler, Red/Blue takım rekabetleri.</p>
+          </div>
+        </section>
+
+      </div>
   </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Milenium Security </p>
+      <p class="footer-subtitle" id="footerText">Siber Güvenlikte Uzmanlık, Başarı ve Güven</p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <script src="assets/main.js"></script>
 </body>
 </html>

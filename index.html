@@ -3,27 +3,250 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Milenium Security – Consulting Portfolio</title>
+  <title>Milenium Security – Offensive & Defensive Cybersecurity Consulting</title>
   <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <h1>Milenium Security</h1>
-    <nav>
-      <a href="index.html">Ana Sayfa</a>
+  <header id="navbar" class="navbar">
+    <div class="container">
+      <div class="logo">
+        <a href="index.html">
+          <img src="assets/logo.png" alt="Milenium Security" class="logo-img">
+          <h1>Milenium Security</h1>
+        </a>
+      </div>
+      <nav class="main-nav">
+        <a href="index.html" class="active">Ana Sayfa</a>
       <a href="about.html">Hakkımızda</a>
       <a href="services.html">Hizmetler</a>
       <a href="contact.html">İletişim</a>
+        <button class="lang-toggle" id="langToggle">EN</button>
     </nav>
+    </div>
   </header>
 
-  <section class="intro">
-    <h2>Danışmanlık & Siber Güvenlik Hizmetleri</h2>
-    <p>Ofansif ve Defansif güvenliğin birleştiği noktada, Milenium Security kurumların dijital varlıklarını korur, test eder ve geliştirir.</p>
+  <main>
+    <section class="hero" id="hero">
+      <div class="hero-content" data-aos="fade-down" data-aos-duration="1200">
+        <h1 class="hero-title" id="heroTitle">Offensive & Defensive<br>Cybersecurity Consulting</h1>
+      </div>
+      <div class="hero-description" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1200">
+        <p class="hero-text" id="heroText">Ofansif ve defansif güvenliğin birleştiği noktada, Milenium Security kurumların dijital varlıklarını korur, test eder ve geliştirir.</p>
+        <p class="hero-subtext" id="heroSubtext">360° danışmanlık yaklaşımıyla siber dayanıklılığı artırır.</p>
+      </div>
+      <div class="hero-cta" data-aos="zoom-in" data-aos-delay="600" data-aos-duration="1000">
+        <a href="services.html" class="btn btn-primary" id="btnServices">Hizmetlerimizi Keşfet</a>
+        <a href="about.html" class="btn btn-secondary" id="btnAbout">Hakkımızda</a>
+      </div>
+    </section>
+
+    <section class="features" id="features">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-up" id="featuresTitle">Neden Milenium Security?</h2>
+        <div class="features-grid">
+          <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="feature-icon">🟥</div>
+            <h3 id="feature1Title">Offensive Security</h3>
+            <p id="feature1Text">Kapsamlı penetrasyon testleri ve Red Team operasyonları ile saldırı yüzeyinizi minimize edin.</p>
+          </div>
+          <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="feature-icon">🟦</div>
+            <h3 id="feature2Title">Defensive Security</h3>
+            <p id="feature2Text">SIEM/EDR kurulumu, tehdit avcılığı ve olay müdahale ile savunma hatlarınızı güçlendirin.</p>
+          </div>
+          <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="feature-icon">🟨</div>
+            <h3 id="feature3Title">GRC & Compliance</h3>
+            <p id="feature3Text">ISO 27001, NIST, CIS ve KVKK uyumluluğu ile risk yönetimi ve süreklilik planlaması.</p>
+          </div>
+          <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+            <div class="feature-icon">🟩</div>
+            <h3 id="feature4Title">DevSecOps</h3>
+            <p id="feature4Text">Güvenli yazılım geliştirme, CI/CD güvenliği ve bulut altyapı koruması.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="statistics" id="statistics">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-up" id="statsTitle">Rakamlarla Başarımız</h2>
+        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100" id="statsSubtitle">Profesyonel hizmetlerimizle siber güvenlikte fark yaratıyoruz</p>
+        <div class="stats-grid">
+          <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="stat-icon">🛡️</div>
+            <div class="stat-chart">
+              <canvas id="systemsChart"></canvas>
+            </div>
+            <h3 class="stat-number" id="systemsNumber">0</h3>
+            <p class="stat-label" id="systemsLabel">Müdahale Ettiğimiz Sistem</p>
+          </div>
+          <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="stat-icon">✅</div>
+            <div class="stat-chart">
+              <canvas id="recoveryChart"></canvas>
+            </div>
+            <h3 class="stat-number" id="recoveryNumber">0%</h3>
+            <p class="stat-label" id="recoveryLabel">Kurtarılan Sistem Yüzdesi</p>
+          </div>
+          <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="stat-icon">🎯</div>
+            <div class="stat-chart">
+              <canvas id="vulnerabilityChart"></canvas>
+            </div>
+            <h3 class="stat-number" id="vulnerabilityNumber">0%</h3>
+            <p class="stat-label" id="vulnerabilityLabel">Saldırganlardan Önce Bulma Oranı</p>
+          </div>
+          <div class="stat-card" data-aos="fade-up" data-aos-delay="400">
+            <div class="stat-icon">🏆</div>
+            <div class="stat-chart">
+              <canvas id="successChart"></canvas>
+            </div>
+            <h3 class="stat-number" id="successNumber">0%</h3>
+            <p class="stat-label" id="successLabel">Genel Başarı Oranımız</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="success-story" id="successStory">
+      <div class="container">
+        <div class="success-content" data-aos="fade-up">
+          <div class="success-icon">⚡</div>
+          <h2 class="section-title" id="successTitle">Başarı Hikayelerimizden Sadece Birisi</h2>
+          <div class="story-card">
+            <div class="story-header">
+              <span class="story-badge" id="successBadge">Kritik Durum Müdahalesi</span>
+              <span class="story-time" id="successTime">48 Saat İçinde Çözüm</span>
+            </div>
+            <p class="story-text" id="successText1">Çalıştığımız kurumlardan birisine sızan bir virüs, tüm yedekleri yok etmiş ve sistemi tamamen kilitlemişti. Kritik bir durumda olan kurum, operasyonel faaliyetlerini durdurmak zorunda kalmış ve ciddi bir prestij ve maddi kayıp riskiyle karşı karşıyaydı.</p>
+            <p class="story-text" id="successText2">Milenium Security ekibi olarak, 48 saat içerisinde virüsün tamamen temizlenmesini ve sistemin geri kullanılabilir hale gelmesini sağladık. Kurumun prestijini koruduk ve milyonlarca liralık maddi kaybı engelledik.</p>
+            <div class="story-results">
+              <div class="result-item">
+                <strong id="result1">✓ Prestij Kaybı Engellendi</strong>
+              </div>
+              <div class="result-item">
+                <strong id="result2">✓ Maddi Kayıp Önlendi</strong>
+              </div>
+              <div class="result-item">
+                <strong id="result3">✓ Sistem 48 Saatte Kurtarıldı</strong>
+              </div>
+              <div class="result-item">
+                <strong id="result4">✓ Operasyonel Süreklilik Sağlandı</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="advantages" id="advantages">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-up" id="advantagesTitle">Neden Bizi Tercih Etmelisiniz?</h2>
+        <div class="advantages-grid">
+          <div class="advantage-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="advantage-icon">🌍</div>
+            <h3 id="adv1Title">Multilingual Hizmet</h3>
+            <p id="adv1Text">Türkçe ve İngilizce olarak profesyonel danışmanlık hizmeti sunuyoruz. Uluslararası müşterilerimizle iletişimde dil bariyeri yaşamıyoruz.</p>
+          </div>
+          <div class="advantage-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="advantage-icon">🆓</div>
+            <h3 id="adv2Title">Ücretsiz Ön Değerlendirme</h3>
+            <p id="adv2Text">Güvenlik gereksinimlerinizi ücretsiz olarak değerlendiriyoruz. Projeniz için özelleştirilmiş çözüm önerileri hazırlıyoruz.</p>
+          </div>
+          <div class="advantage-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="advantage-icon">🎯</div>
+            <h3 id="adv3Title">Kurumsal Strateji</h3>
+            <p id="adv3Text">Her kurumun ihtiyacına özel siber stratejiler geliştiriyoruz. Teknik çözümlerin yanı sıra, iş sürekliliği ve risk yönetimini de kapsayan bütüncül yaklaşım.</p>
+          </div>
+          <div class="advantage-card" data-aos="fade-up" data-aos-delay="400">
+            <div class="advantage-icon">🌐</div>
+            <h3 id="adv4Title">Uluslararası Deneyim</h3>
+            <p id="adv4Text">Letonya ve Azerbaycan Defcon gibi uluslararası konferanslarda sunumlar yaptık. Küresel siber güvenlik ekosisteminin bir parçasıyız.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="experts" id="experts">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-up" id="expertsTitle">Uzman Ekibimiz</h2>
+        <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100" id="expertsSubtitle">Siber güvenlik alanında uluslararası sertifikalara sahip profesyonel ekibimiz</p>
+        <div class="experts-grid">
+          <div class="expert-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="expert-header">
+              <div class="expert-avatar">🔴</div>
+              <div class="expert-info">
+                <h3>Azizcan Daştan</h3>
+                <p class="expert-role" id="expert1Role">Web3/Web Security Researcher | CEH | OSCP | OSCE</p>
+              </div>
+            </div>
+            <p class="expert-bio" id="expert1Bio">Offensive security alanında uzman. Penetrasyon testi, web uygulama güvenliği ve Web3 güvenlik araştırmaları konularında deneyimli.</p>
+            <a href="https://www.linkedin.com/in/azqzazq" target="_blank" rel="noopener" class="expert-linkedin">
+              <span>LinkedIn'de Bağlan</span> →
+            </a>
+          </div>
+          <div class="expert-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="expert-header">
+              <div class="expert-avatar">🔵</div>
+              <div class="expert-info">
+                <h3>Özlem Ozan</h3>
+                <p class="expert-role" id="expert2Role">Cyber Security Specialist | Threat Analysis, SIEM, SOC & KVKK & GDPR Compliance</p>
+              </div>
+            </div>
+            <p class="expert-bio" id="expert2Bio">Defensive security ve compliance alanlarında uzman. SIEM/EDR kurulumu, tehdit analizi, KVKK ve GDPR uyumluluğu konularında deneyimli.</p>
+            <a href="https://www.linkedin.com/in/%C3%B6zlem-ozan-645391242" target="_blank" rel="noopener" class="expert-linkedin">
+              <span>LinkedIn'de Bağlan</span> →
+            </a>
+          </div>
+        </div>
+        <div class="company-linkedin" data-aos="fade-up" data-aos-delay="300">
+          <a href="https://www.linkedin.com/company/milenium-security/" target="_blank" rel="noopener" class="btn btn-primary" id="companyLinkedinBtn">
+            Şirket LinkedIn Sayfamız
+          </a>
+        </div>
+      </div>
   </section>
 
-  <footer>
-    <p>© 2025 Milenium Security | Prepared by Aziz Daştan</p>
+    <section class="achievements" id="achievements">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-up" id="achievementsTitle">Başarılarımız ve Katılımlarımız</h2>
+        <div class="achievements-content">
+          <div class="achievement-card" data-aos="fade-right" data-aos-delay="100">
+            <div class="achievement-icon">🎤</div>
+            <h3 id="ach1Title">Uluslararası Konferans Konuşmaları</h3>
+            <p id="ach1Text">Letonya ve Azerbaycan Defcon gibi prestijli siber güvenlik konferanslarında ofansif security konularında sunumlar yaptık. Global siber güvenlik topluluğuyla bilgi ve deneyim paylaşımında bulunuyoruz.</p>
+          </div>
+          <div class="achievement-card" data-aos="fade-left" data-aos-delay="200">
+            <div class="achievement-icon">🎯</div>
+            <h3 id="ach2Title">Kurumlara Özel Siber Stratejiler</h3>
+            <p id="ach2Text">Her kurumun benzersiz ihtiyaçlarına göre özelleştirilmiş siber güvenlik stratejileri geliştiriyoruz. Teknik altyapıdan risk yönetimine, iş sürekliliğinden uyumluluğa kadar kapsamlı çözümler sunuyoruz.</p>
+          </div>
+          <div class="achievement-card" data-aos="fade-right" data-aos-delay="300">
+            <div class="achievement-icon">🛡️</div>
+            <h3 id="ach3Title">Ofansif Security Başarıları</h3>
+            <p id="ach3Text">Red Team operasyonları, penetrasyon testleri ve saldırı simülasyonlarında istikrarlı başarılar elde ediyoruz. Müşterilerimizin saldırı yüzeylerini minimize ederek, gerçek dünya tehditlerine karşı hazırlıklı olmalarını sağlıyoruz.</p>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Milenium Security </p>
+      <p class="footer-subtitle" id="footerText">Siber Güvenlikte Uzmanlık, Başarı ve Güven</p>
+    </div>
   </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <script src="assets/main.js"></script>
 </body>
 </html>

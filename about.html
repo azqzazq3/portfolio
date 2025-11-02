@@ -2,23 +2,108 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hakkımızda – Milenium Security</title>
   <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <h1>Hakkımızda</h1>
-    <nav>
-      <a href="index.html">Ana Sayfa</a>
-      <a href="services.html">Hizmetler</a>
-      <a href="contact.html">İletişim</a>
-    </nav>
+  <header id="navbar" class="navbar">
+    <div class="container">
+      <div class="logo">
+        <a href="index.html">
+          <img src="assets/logo.png" alt="Milenium Security" class="logo-img">
+          <h1>Milenium Security</h1>
+        </a>
+      </div>
+      <nav class="main-nav">
+        <a href="index.html">Ana Sayfa</a>
+        <a href="about.html" class="active">Hakkımızda</a>
+        <a href="services.html">Hizmetler</a>
+        <a href="contact.html">İletişim</a>
+        <button class="lang-toggle" id="langToggle">EN</button>
+      </nav>
+    </div>
   </header>
 
-  <section class="about">
-    <h2>Milenium Security</h2>
-    <p>Milenium Security, ofansif ve defansif güvenlik alanında danışmanlık hizmetleri sunan bağımsız bir siber güvenlik firmasıdır. 
-    Hizmetlerimiz Red Team, Blue Team, GRC, DevSecOps ve eğitim kategorilerini kapsar.</p>
-  </section>
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1 class="page-title" data-aos="fade-down" id="aboutPageTitle">Hakkımızda</h1>
+        <p class="page-subtitle" data-aos="fade-up" data-aos-delay="200" id="aboutPageSubtitle">Ofansif ve Defansif Siber Güvenlikte Uzmanlık</p>
+      </div>
+    </section>
+
+    <section class="about-content">
+      <div class="container">
+        <div class="about-section" data-aos="fade-up">
+          <h2 id="aboutTitle">Milenium Security</h2>
+          <p id="aboutText1">Milenium Security, ofansif (Red Team) ve defansif (Blue Team) güvenlik alanlarında uzmanlaşmış bağımsız bir siber güvenlik danışmanlık firmasıdır.</p>
+          <p id="aboutText2">Şirketimiz, ISO 27001, NIST, CIS ve KVKK standartlarına uygun güvenlik yapıları kurarak kurumların risklerini minimize eder.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-card" data-aos="fade-right" data-aos-delay="100">
+            <div class="card-icon">🎯</div>
+            <h3 id="missionTitle">Misyonumuz</h3>
+            <p id="missionText">Saldırı yüzeyini en aza indirmek, tehditleri erken tespit etmek ve siber güvenliği ölçülebilir hale getirmektir. Kurumların dijital varlıklarını korurken, sürekli gelişen tehdit ortamına karşı proaktif çözümler sunuyoruz.</p>
+          </div>
+
+          <div class="about-card" data-aos="fade-left" data-aos-delay="200">
+            <div class="card-icon">🔮</div>
+            <h3 id="visionTitle">Vizyonumuz</h3>
+            <p id="visionText">Güvenliği "bir maliyet" değil, "bir değer" olarak konumlandıran kurumsal kültür oluşturmaktır. Siber güvenliğin stratejik bir yatırım olduğu bilinciyle, müşterilerimizin rekabet avantajını artırıyoruz.</p>
+          </div>
+        </div>
+
+        <div class="about-values" data-aos="fade-up" data-aos-delay="300">
+          <h3 id="valuesTitle">Değerlerimiz</h3>
+          <div class="values-grid">
+            <div class="value-item">
+              <strong>Uzmanlık</strong>
+              <p id="value1Text">Red Team, Blue Team, GRC ve DevSecOps alanlarında derin teknik bilgi.</p>
+            </div>
+            <div class="value-item">
+              <strong>Bütüncül Yaklaşım</strong>
+              <p id="value2Text">Ofansif ve defansif güvenliği birleştiren 360° danışmanlık modeli.</p>
+            </div>
+            <div class="value-item">
+              <strong>Ölçülebilirlik</strong>
+              <p id="value3Text">Siber güvenlik yatırımlarının ROI'sini somut metriklerle gösteriyoruz.</p>
+            </div>
+            <div class="value-item">
+              <strong>Sürekli İyileştirme</strong>
+              <p id="value4Text">Tehdit ortamındaki değişimleri takip ederek çözümlerimizi güncelliyoruz.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-expertise" data-aos="fade-up" data-aos-delay="400">
+          <h3 id="expertiseTitle">Uzmanlık Alanlarımız</h3>
+          <ul class="expertise-list">
+            <li>🟥 Offensive Security (Web, Mobile, Network, AD, IoT/OT Pentesting)</li>
+            <li>🟦 Defensive Security (SIEM/EDR, IR, Threat Hunting, SOC)</li>
+            <li>🟨 Governance, Risk & Compliance (ISO 27001, NIST, CIS, KVKK)</li>
+            <li>🟩 Cloud & DevSecOps (Secure SDLC, CI/CD, Container Security)</li>
+            <li>🟪 Awareness & Training (Red/Blue/Purple Team Eğitimleri)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Milenium Security</p>
+      <p class="footer-subtitle" id="footerText">Siber Güvenlikte Uzmanlık, Başarı ve Güven</p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <script src="assets/main.js"></script>
 </body>
 </html>

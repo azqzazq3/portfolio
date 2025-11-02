@@ -2,23 +2,113 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>İletişim – Milenium Security</title>
   <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <h1>İletişim</h1>
-    <nav>
-      <a href="index.html">Ana Sayfa</a>
-      <a href="services.html">Hizmetler</a>
-      <a href="about.html">Hakkımızda</a>
-    </nav>
+  <header id="navbar" class="navbar">
+    <div class="container">
+      <div class="logo">
+        <a href="index.html">
+          <img src="assets/logo.png" alt="Milenium Security" class="logo-img">
+          <h1>Milenium Security</h1>
+        </a>
+      </div>
+      <nav class="main-nav">
+        <a href="index.html">Ana Sayfa</a>
+        <a href="about.html">Hakkımızda</a>
+        <a href="services.html">Hizmetler</a>
+        <a href="contact.html" class="active">İletişim</a>
+        <button class="lang-toggle" id="langToggle">EN</button>
+      </nav>
+    </div>
   </header>
 
-  <section class="contact">
-    <h2>Bizimle İletişime Geçin</h2>
-    <p>Email: <a href="mailto:info@mileniumsecurity.com">info@mileniumsecurity.com</a></p>
-    <p>LinkedIn: <a href="#">linkedin.com/company/mileniumsecurity</a></p>
-  </section>
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1 class="page-title" data-aos="fade-down" id="contactPageTitle">İletişim</h1>
+        <p class="page-subtitle" data-aos="fade-up" data-aos-delay="200" id="contactPageSubtitle">Projeleriniz için bizimle iletişime geçin</p>
+      </div>
+    </section>
+
+    <section class="contact-content">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-info" data-aos="fade-right">
+            <h2 id="contactInfoTitle">Bizimle İletişime Geçin</h2>
+            <p id="contactInfoText">Siber güvenlik projeleriniz için profesyonel danışmanlık hizmetlerimizden yararlanmak istiyorsanız, lütfen bizimle iletişime geçin. Size en kısa sürede dönüş yapacağız.</p>
+            
+            <div class="contact-details">
+              <div class="contact-item">
+                <div class="contact-icon">💼</div>
+                <div>
+                  <strong id="linkedinCompanyLabel">Şirket LinkedIn</strong>
+                  <p><a href="https://www.linkedin.com/company/milenium-security/" target="_blank" rel="noopener">linkedin.com/company/milenium-security</a></p>
+                </div>
+              </div>
+              
+              <div class="contact-item">
+                <div class="contact-icon">👤</div>
+                <div>
+                  <strong id="linkedinExpert1Label">Azizcan Daştan - LinkedIn</strong>
+                  <p><a href="https://www.linkedin.com/in/azqzazq" target="_blank" rel="noopener">linkedin.com/in/azqzazq</a></p>
+                </div>
+              </div>
+              
+              <div class="contact-item">
+                <div class="contact-icon">👤</div>
+                <div>
+                  <strong id="linkedinExpert2Label">Özlem Ozan - LinkedIn</strong>
+                  <p><a href="https://www.linkedin.com/in/%C3%B6zlem-ozan-645391242" target="_blank" rel="noopener">linkedin.com/in/özlem-ozan</a></p>
+                </div>
+              </div>
+              
+              <div class="contact-item">
+                <div class="contact-icon">🌐</div>
+                <div>
+                  <strong id="websiteLabel">Website</strong>
+                  <p><a href="https://azqzazq3.github.io/portfolio" target="_blank" rel="noopener">azqzazq3.github.io/portfolio</a></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-note" data-aos="fade-up" data-aos-delay="300">
+              <p id="contactNote"><strong>Not:</strong> Güvenlik danışmanlığı ve penetrasyon testi hizmetleri için lütfen önceden iletişime geçin. Proje gereksinimlerinize göre özelleştirilmiş teklif hazırlayacağız.</p>
+            </div>
+          </div>
+
+          <div class="contact-card" data-aos="fade-left">
+            <div class="card-content">
+              <h3 id="consultationTitle">Ücretsiz Danışmanlık</h3>
+              <p id="consultationText">İlk danışmanlık görüşmesi ücretsizdir. Projenizin güvenlik gereksinimlerini değerlendirip, en uygun çözüm önerilerini sunuyoruz.</p>
+              <ul class="consultation-list">
+                <li>✓ <span id="cons1">Güvenlik gereksinimlerinizin analizi</span></li>
+                <li>✓ <span id="cons2">Özelleştirilmiş çözüm önerileri</span></li>
+                <li>✓ <span id="cons3">Teknik danışmanlık görüşmesi</span></li>
+                <li>✓ <span id="cons4">Detaylı teklif hazırlama</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Milenium Security </p>
+      <p class="footer-subtitle" id="footerText">Siber Güvenlikte Uzmanlık, Başarı ve Güven</p>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <script src="assets/main.js"></script>
 </body>
 </html>
